@@ -135,8 +135,18 @@
     border-radius: 2px;
     background-size: cover;
     background-position: center;
+    filter: grayscale(1) contrast(1.05);
     position: relative;
     overflow: hidden;
+  }
+  .feature-image::after,
+  .card-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--card), var(--accent));
+    mix-blend-mode: color;
+    pointer-events: none;
   }
   .feature-text .eyebrow { margin-bottom: 14px; display: block; }
   .feature-text h2 {
@@ -208,6 +218,9 @@
     border-radius: 2px;
     background-size: cover;
     background-position: center;
+    filter: grayscale(1) contrast(1.05);
+    position: relative;
+    overflow: hidden;
     transition: transform 0.3s;
   }
 
